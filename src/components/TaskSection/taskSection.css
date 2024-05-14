@@ -1,0 +1,125 @@
+.taskList {
+    border-radius: 5px;
+    box-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
+    background-color: var(--list-bg);
+    position: relative;
+    top: -54px;
+  } 
+  .task {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--list-border);
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    @media (max-width:470px) {
+      gap: 12px;
+      }
+  }
+  .task-text {
+    flex-grow: 2;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: var(--txt-clr1);
+    cursor: pointer;
+    @media (max-width:470px) {
+      font-size: 12px;
+    }
+  }
+  .cross-btn {
+    cursor: pointer;
+    display: none;
+    @media (max-width:470px) {
+      display: block;
+    }
+  }
+  .task:hover {
+    .cross-btn {
+      display: block;
+    }
+  }
+  .task-checkbox[type="checkbox"]:checked ~ .task-text {
+    text-decoration: line-through;
+    color: var(--txt-clr2);
+  }
+  .activeBar {
+    padding: 16px 24px 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    color: var(--text-clr3);
+    position: relative;
+  }
+  .list {
+    display: flex;
+    gap: 18px;
+    @media (max-width:500px) {
+      display: none;
+    }
+  }
+  .list > li {
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .list > li:hover {
+    color: var(--txt-hover);
+  }
+  .list-active {
+    color: #3a7cfd;
+  }
+  .taskListCount:hover {
+    color: var(--txt-hover);
+  }
+  button {
+    background: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    text-align: right;
+    color: var(--text-clr3);
+    font-family: "Josefin Sans", sans-serif;
+    cursor: pointer;
+  }
+  button:hover {
+    color: var(--txt-hover);
+  }
+  .footer-text {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #9495a5;
+    position: absolute;
+    left: 30%;
+    top: 100px;
+    @media (max-width:500px) {
+      top: 150px;
+    }
+  }
+  .media-bar {
+    border-radius: 5px;
+    width: 100%;
+    height: 48px;
+    background-color: var(--list-bg);
+    position:absolute ;
+    bottom: -70px;
+    border-radius: 5px;
+    box-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-clr3);
+    display: none;
+  @media (max-width:500px) {
+    display: flex;
+  }
+  }
+  .media-list{
+    display: flex;
+    gap: 18px;
+  } 
+  
